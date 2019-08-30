@@ -2,15 +2,11 @@ const path = require('path')
 const rootPath = path.resolve(__dirname, '../src')
 
 module.exports = async ({ config, mode }) => {
+    //---- Vueでの"@"や"~"でのパス指定を有効にする
     config.resolve.alias['@'] = rootPath
     config.resolve.alias['~'] = rootPath
 
-    // config.module.rules.push({
-    //     test: /\.vue$/,
-    //     loader: 'storybook-addon-vue-info/loader',
-    //     enforce: 'post'
-    // })
-
+    //---- コンポーネントで利用しているscssを有効にする
     config.module.rules.push({
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
@@ -23,6 +19,12 @@ module.exports = async ({ config, mode }) => {
     //     use: ['file-loader'],
     //     query: { name: 'static/media/[name].[hash:8].[ext]' },
     // });
+
+    // config.module.rules.push({
+    //     test: /\.vue$/,
+    //     loader: 'storybook-addon-vue-info/loader',
+    //     enforce: 'post'
+    // })
 
     // config.module.rules.push({
     //     test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,

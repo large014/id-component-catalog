@@ -1,6 +1,5 @@
 <template>
   <div class="sample_sliderbar_wrappear">
-    <p class="test"> テスト・テスト</p>
     <div class="sliderbarArea">
       <div class="sample sample1">
         <Sample1/>
