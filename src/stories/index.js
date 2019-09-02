@@ -1,6 +1,8 @@
 import { storiesOf } from '@storybook/vue'
 
 import HelloWorld from './../components/HelloWorld.vue'
+import IFrameWrapper from './../components/IFrameWrapper.vue'
+
 
 //---------------------------------------------------------------------------------------
 // UI系コンポーネント
@@ -33,7 +35,7 @@ import Sample_Sliderbar from './../components/Ui/sliderbar/Sample_Sliderbar'
 // import Sample_RandomText from './../components/Function/randam-text/Sample_RandomText'
 
 // 1-10_nakamura
-import Sample_Gmap from './../components/Function/gmap/Sample_Gmap'
+// import Sample_Gmap from './../components/Function/gmap/Sample_Gmap'
 import Sample_Add_Balloon from './../components/Function/add-balloon/Sample_Add_Balloon'
 
 // 1-10_iizuka
@@ -50,7 +52,7 @@ import Sample_DiffChecker from './../components/Function/diff-checker/Sample_Dif
 // 演出系コンポーネント
 //---------------------------------------------------------------------------------------
 // 1-10_takatori
-import Sample_RandomText from './../components/Effects/randam-text/Sample_RandomText'
+// import Sample_RandomText from './../components/Effects/randam-text/Sample_RandomText'
 
 // 1-10_iizuka
 import Sample_FadeText from './../components/Effects/fade-text/Sample_FadeText'
@@ -130,10 +132,71 @@ storiesOf('UI', module)
 // 機能系コンポーネント ストーリー
 //---------------------------------------------------------------------------------------
 storiesOf('FUNCTION', module)
+    //---- 1-10_takatori
+    .add('gltf-player', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://tktr90755.github.io/vue-gltf-player/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('iterator', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://tktr90755.github.io/vue-iterator/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('svg-homing-player', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://tktr90755.github.io/vue-svg-homing-player/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('spritesheet-player', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://tktr90755.github.io/vue-spritesheet-player/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('image-tiling', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://tktr90755.github.io/vue-image-tiling/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+
+    //---- 1-10_fuziwara
+    .add('mouse-direction-slide-button-list', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-mouse-direction/#/slide-button-list">KEEP IT SIMPLE</IFrameWrapper>`,
+    }))
+    .add('mouse-direction-3D-float-button', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-mouse-direction/#/3d-float-button">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('shader-effect-destortion', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-shader-effect/#/distortion">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('shader-effect-line', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-shader-effect/#/line">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+
+
     //---- 1-10_nakamura
     .add('gmap', () => ({
-        components: { Sample_Gmap },
-        template: `<Sample_Gmap>KEEP IT SIMPLE</Sample_Gmap>`
+        // components: { Sample_Gmap },
+        // template: `<Sample_Gmap>KEEP IT SIMPLE</Sample_Gmap>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://dev.1-10.net/nakamura/c/vue-gmap/index.html">KEEP IT SIMPLE</IFrameWrapper>`
     }))
     .add('add_balloon', () => ({
         components: { Sample_Add_Balloon },
@@ -149,6 +212,19 @@ storiesOf('FUNCTION', module)
         components: { Sample_PictureBook_Ui },
         template: `<Sample_PictureBook_Ui>KEEP IT SIMPLE</Sample_PictureBook_Ui>`
     }))
+    .add('sphericalimage', () => ({
+        // components: { Sample_Gmap },
+        // template: `<Sample_Gmap>KEEP IT SIMPLE</Sample_Gmap>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="http://sample.1-10.jp/staff032/demo/SphericalImage/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('ticker', () => ({
+        // components: { Sample_Gmap },
+        // template: `<Sample_Gmap>KEEP IT SIMPLE</Sample_Gmap>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://112ka.github.io/example/vue-ticker/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+
 
     //---- 1-10_matsuda
     .add('simple_audio_player', () => ({
@@ -163,6 +239,39 @@ storiesOf('FUNCTION', module)
         components: { Sample_DiffChecker },
         template: `<Sample_DiffChecker>KEEP IT SIMPLE</Sample_DiffChecker>`
     }))
+    .add('add_scrollclass', () => ({
+        // components: { Sample_DiffChecker },
+        // template: `<Sample_DiffChecker>KEEP IT SIMPLE</Sample_DiffChecker>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://mattune.github.io/vue-scrollclass/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+
+    //---- 1-10_hagihara
+    .add('scrollmagic', () => ({
+        // components: { Sample_DiffChecker },
+        // template: `<Sample_DiffChecker>KEEP IT SIMPLE</Sample_DiffChecker>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://ohagip.github.io/vue-scrollmagic/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('rollover', () => ({
+        // components: { Sample_DiffChecker },
+        // template: `<Sample_DiffChecker>KEEP IT SIMPLE</Sample_DiffChecker>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://ohagip.github.io/vue-rollover/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('share-button', () => ({
+        // components: { Sample_DiffChecker },
+        // template: `<Sample_DiffChecker>KEEP IT SIMPLE</Sample_DiffChecker>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://ohagip.github.io/vue-share-button/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('background-size', () => ({
+        // components: { Sample_DiffChecker },
+        // template: `<Sample_DiffChecker>KEEP IT SIMPLE</Sample_DiffChecker>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://ohagip.github.io/vue-background-size/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+
 
 //---------------------------------------------------------------------------------------
 // 演出系コンポーネント ストーリー
@@ -170,14 +279,60 @@ storiesOf('FUNCTION', module)
 storiesOf('EFFECT', module)
     //---- 1-10_takatori
     .add('random-text', () => ({
-        components: { Sample_RandomText },
-        template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://tktr90755.github.io/vue-random-text/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('sound-spectrum', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://tktr90755.github.io/vue-sound-spectrum/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+
+    //---- 1-10_fuziwara
+    .add('svg-jelly', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-svg-jelly/index.html">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('svg-distotion', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-svg-distotion/index.html">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('svg-ripple', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-svg-ripple/index.html">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('vue-svg-duotone', () => ({
+        // components: { Sample_RandomText },
+        // template: `<Sample_RandomText>KEEP IT SIMPLE</Sample_RandomText>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://yoshihitofujiwara.github.io/vue-svg-duotone/index.html">KEEP IT SIMPLE</IFrameWrapper>`
     }))
 
     //---- 1-10_iizuka
     .add('fade-text', () => ({
         components: { Sample_FadeText },
         template: `<Sample_FadeText>KEEP IT SIMPLE</Sample_FadeText>`
+    }))
+    .add('xslider', () => ({
+        // components: { Sample_Gmap },
+        // template: `<Sample_Gmap>KEEP IT SIMPLE</Sample_Gmap>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://112ka.github.io/example/vue-xslider/">KEEP IT SIMPLE</IFrameWrapper>`
+    }))
+    .add('confetti', () => ({
+        // components: { Sample_Gmap },
+        // template: `<Sample_Gmap>KEEP IT SIMPLE</Sample_Gmap>`
+        components: { IFrameWrapper },
+        template: `<IFrameWrapper path="https://112ka.github.io/example/vue-confetti/">KEEP IT SIMPLE</IFrameWrapper>`
     }))
 
     //---- 1-10_matsuda
